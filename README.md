@@ -1,1 +1,4 @@
-# IPR-Project
+IPR - Project 
+
+Jens Dostal 
+Marco Haas
