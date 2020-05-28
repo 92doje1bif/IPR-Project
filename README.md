@@ -5,7 +5,7 @@
 
 Todos: 
 -verlinkungen der Icons, jeweils auf die Website.
--Löschen von Gestebucheinträgen wenn man angemeldet ist wäre noch gut.
+-Löschen von Gästebucheinträgen wenn man angemeldet ist wäre noch gut.
 
 zum registrieren immernoch "secret"
 
