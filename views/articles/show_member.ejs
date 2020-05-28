@@ -24,17 +24,20 @@
               <a class="nav-link" href="/member">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/">Logout</a>
+              <a class="nav-link" href="/guests">Gästebuch</a>
             </li>
+            <form action="/logout?_method=DELETE" method="POST">
+	            <button typ="submit" class="btn btn-secondary">Logout</button>
+            </form>
           </ul>
         </div>
     </nav>
     <div class='container'>
       <% articles.forEach(article => { %>
-        <h1 class='mb-1'><%= article.title %> </h1>
+        <h1 class='mb-1 mt-2'><%= article.title %> </h1>
         <div class='text-muted mb-2'><%= article.createdAt %></div>
         <a href="/member" class='btn btn-secondary'>Zurück zu allen Artikeln</a>
-        <h4><%= article.description %></h4>
+        <h4 class="mb-3 mt-4"><%= article.description %></h4>
         <h5><%= article.content %> </h5>
       <% }) %>
     </div>

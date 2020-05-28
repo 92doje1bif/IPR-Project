@@ -24,8 +24,11 @@
               <a class="nav-link" href="/member">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/">Logout</a>
+              <a class="nav-link" href="/guests_member">Gästebuch</a>
             </li>
+            <form action="/logout?_method=DELETE" method="POST">
+	            <button typ="submit" class="btn btn-secondary">Logout</button>
+            </form>
           </ul>
         </div>
     </nav>
@@ -37,9 +40,9 @@
                 <lable for='title'>Titel:</lable>
                 <input type="text" name='title' id='title' class='form-control'>
                 <lable for='description'>Beschreibung:</lable>
-                <textarea name='description' id='description' class='form-control'></textarea>
+                <textarea name='description' id='description' class='form-control'style="height: 100px;"></textarea>
                 <lable for='content'>Artikel:</lable>
-                <textarea name='content' id='content' class='form-control'></textarea>
+                <textarea name='content' id='content' class='form-control' style="height: 200px;"></textarea>
             </div>
             <button type='submit' class='btn btn-success'>Absenden</button>
             <a href="/member" class='btn btn-secondary'>Abbrechen</a>

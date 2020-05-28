@@ -31,10 +31,10 @@
     </nav>
     <div class='container'>
       <% articles.forEach(article => { %>
-        <h1 class='mb-1'><%= article.title %> </h1>
+        <h1 class='mb-1 mt-2'><%= article.title %> </h1>
         <div class='text-muted mb-2'><%= article.createdAt %></div>
         <a href="/" class='btn btn-secondary'>Zurück zu allen Artikeln</a>
-        <h4><%= article.description %></h4>
+        <h4 class="mb-3 mt-4"><%= article.description %></h4>
         <h5><%= article.content %> </h5>
       <% }) %>
     </div>
