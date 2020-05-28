@@ -34,12 +34,21 @@
     </nav>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-xs-12 col-sm-9 mt-3 mb-2">
+            <div class="col-md-12">
                 <h1 class="blog-title display-5">Gästebuch</h1>
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-xs-12 col-sm-8">
+        <div>
+            <form action="/remove_guests?_method=DELETE" method="POST">
+                <div class="form-group">
+                    <label for="blog-form-input-name">Löschen des Eintrags mit der eingegebenen id:</label>
+                    <input type="text" name="id" class="form-control" id="id">
+                    <button id="blog-form-submit" type="submit" class="btn btn-danger mt-2">Löschen</button>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-md-12 card">
                 <table class="table table-striped">
                     <thead>
                         <tr>

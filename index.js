@@ -224,6 +224,15 @@ app.delete('/articles/:id', checkAuthenticated,async(req, res) => {
       });
 })
 
+app.delete('/remove_guests', checkAuthenticated,async(req, res) => {
+  dbGuests.run(`DELETE FROM shouts WHERE rowid=?`,[req.body.id], function(err) {
+      if (err) {
+        return console.error(err.message);
+      }
+      res.redirect('/guests_member')
+    });
+})
+
 app.put('/articles/:id', checkAuthenticated, async (req, res) => {
     const id = req.params.id
     db.run(`UPDATE articles SET title=?, description=?, content=? WHERE rowid=?`,[req.body.title, req.body.description, req.body.content, id], function(err) {
